@@ -1,0 +1,116 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title> FreakAttend-{StudentName} </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark" style=' display: flex; justify-content : space-around;'>
+    <a class="navbar-brand" href="/" style='color:white; align-content: center'>
+        FreakAttend  <i class="fa fa-user"></i>
+    </a>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 20px; margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-around; margin-top: 2px;">
+                    <img src="http://www.clipartpanda.com/clipart_images/user-66327738/download"
+                         class="card-img-top" alt="..." style="height: 50px; width: 50px;">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ekta Mishra</h5>
+                    <p class="card-text">CSE 3rd Year</p>
+                    <a href="#" class="btn btn-primary">View records <i class="fas fa-hand-point-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div id="chartContainer" style="height: 200px; width: 90%; margin-top: 20px; margin-left: 20px;"></div>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around;">
+<!--        <p>-->
+<!--            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample"-->
+<!--               role="button" aria-expanded="false" aria-controls="collapseExample">-->
+<!--                Subject wise example-->
+<!--            </a>-->
+<!--        </p>-->
+<!--        <div class="collapse" id="collapseExample">-->
+<!--            <div class="card card-body">-->
+<!--                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <p>
+        <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapse1"
+           role="button" aria-expanded="false" aria-controls="collapseExample">
+             Subject wise attendance <i class="fa fa-arrow-down"></i>
+        </a>
+    </p>
+
+    <div class="collapse" id="collapse1">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Higher Secondary School [2013 - 2015]<br> <b>St.Giri Public School, Sarita vihar</b></li>
+                    <li class="list-group-item list-group-item-danger">Senior Secondary School [2015 - 2017]<br> <b>D.A.V. Public School, Jasola vihar</b></li>
+                    <li class="list-group-item list-group-item-info">B.Tech[2017 - 2021]<br> <b>G.B. Pant Govt. Engineering College,New Delhi</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            theme: "light2",
+            title:{
+                text: "Last 10 days Attendance "
+            },
+            axisY:{
+                includeZero: false
+            },
+            data: [{
+                type: "line",
+                dataPoints: [
+                    { y: 35 },
+                    { y: 40},
+                    { y: 92, indexLabel: "highest",markerColor: "yellow", markerType: "triangle" },
+                    { y: 76 },
+                    { y: 45 },
+                    { y: 68 },
+                    { y: 48 },
+                    { y: 88 },
+                    { y: 10 , indexLabel: "lowest",markerColor: "red", markerType: "cross" },
+                    { y: 59 },
+                    { y: 28 },
+                    { y: 51 }
+                ]
+            }]
+        });
+        chart.render();
+    }
+</script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+</script>
+</html>
